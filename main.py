@@ -10,7 +10,7 @@ import os
 
 recognizer = sr.Recognizer()
 engine = pyttsx3.init()
-newsapi = "8413b775b1937a7acc9e079f805002af"
+newsapi = "API_KEY_HERE"
 
 def speak_old(text):
     engine.say(text)
@@ -39,7 +39,7 @@ def speak(text):
 
 def aiProcess(command):
     # Configure Gemini with your Google API key
-    genai.configure(api_key="AIzaSyBM14vRkb86-2ZwQKEo9RfQLaGIHRpvOb8")
+    genai.configure(api_key="API_KEY_HERE")
 
     # Create the model (you can use gemini-2.5-flash or gemini-2.5-pro)
     model = genai.GenerativeModel("gemini-2.5-flash")
@@ -112,4 +112,5 @@ if __name__ == "__main__":
                     processCommand(command)
 
         except Exception as e:
+
             print(f"Error: {e}")
